@@ -1,7 +1,7 @@
 local l = require 'lspconfig'
 local langs = {
   "ts_ls", "svelte", "nushell", "basedpyright", "nil_ls", "vala_ls",
-  "bashls", "tailwindcss", "astro", "ruff_lsp", "lua_ls", "marksman"
+  "bashls", "tailwindcss", "astro", "ruff", "lua_ls", "marksman", "zls"
 }
 
 for _, x in pairs(langs) do
@@ -11,6 +11,7 @@ end
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.g.autoformat = false
+vim.b.autoformat = false
 -- Set clipboard to use system clipboard by default
 vim.opt.clipboard = "unnamedplus"
 
@@ -32,4 +33,7 @@ vim.keymap.set("v", "X", '"xX')
 
 vim.diagnostic.config({update_in_insert = true})
 
-return {}
+return {
+  {"nvim-treesitter", enabled = false},
+  {"nvim-treesitter-textobjects", enabled = false}
+}
