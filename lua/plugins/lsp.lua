@@ -1,7 +1,7 @@
 local l = require 'lspconfig'
 local langs = {
   "ts_ls", "svelte", "nushell", "basedpyright", "nil_ls", "vala_ls",
-  "bashls", "tailwindcss", "astro", "ruff", "lua_ls", "marksman", "zls"
+  "nushell", "bashls", "tailwindcss", "astro", "ruff", "lua_ls", "marksman", "zls"
 }
 
 for _, x in pairs(langs) do
@@ -35,5 +35,6 @@ vim.diagnostic.config({update_in_insert = true})
 
 return {
   {"nvim-treesitter", enabled = false},
-  {"nvim-treesitter-textobjects", enabled = false}
+  {"nvim-treesitter-textobjects", enabled = false},
+  {"edgedb/edgedb-vim", version = false}
 }
