@@ -1,3 +1,5 @@
+vim.keymap.set("n", "<leader>gC", ":CoAuthor<CR>")
+
 return {
   {
     {
