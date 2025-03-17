@@ -27,6 +27,8 @@ return {
       },
       version = false
     },
-    {"2kabhishek/co-author.nvim", version = false}
+    {"2kabhishek/co-author.nvim", version = false},
+    {"m4xshen/hardtime.nvim", version = false, dependencies = { "MunifTanjim/nui.nvim" }, opts = {}},
+    {"akinsho/git-conflict.nvim", version = false, config = true}
   }
 }
