@@ -35,5 +35,10 @@ return {
     {"CWood-sdf/spaceport.nvim", opts = {
       sections = {"_global_remaps", "name", "remaps", "recents"}
     }, lazy = false, version = false}
+  },
+  {
+    "chentoast/marks.nvim",
+    event = "VeryLazy",
+    opts = {},
   }
 }
