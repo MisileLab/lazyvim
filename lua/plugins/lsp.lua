@@ -38,6 +38,7 @@ vim.diagnostic.config({update_in_insert = true})
 return {
   {"nvim-treesitter", enabled = false},
   {"nvim-treesitter-textobjects", enabled = false},
-  {"edgedb/edgedb-vim", version = false},
+  -- https://github.com/geldata/edgedb-vim/pull/12
+  {"florisbosch/edgedb-vim", version = false},
   {"LhKipp/nvim-nu", version = false}
 }
