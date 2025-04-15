@@ -3,7 +3,7 @@ local langs = {
   "ts_ls", "svelte", "nushell", "basedpyright", "nil_ls", "vala_ls",
   "nushell", "bashls", "tailwindcss", "astro", "ruff", "lua_ls", "marksman", "zls",
   "clangd", "hls", "jsonls", "gopls", "kotlin_language_server",
-  "ruby_lsp", "rust_analyzer", "metals", "taplo", "yamlls"
+  "ruby_lsp", "rust_analyzer", "metals", "taplo", "yamlls", "svelte"
 }
 
 for _, x in pairs(langs) do
