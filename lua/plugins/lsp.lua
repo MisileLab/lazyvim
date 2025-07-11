@@ -120,8 +120,22 @@ return {
     ---@module 'avante'
     ---@type avante.Config
     opts = {
-      provider = "copilot",
-      providers = {};
+      provider = "openai",
+      -- auto_suggestions_provider = "openai",
+      providers = {
+        copilot = {
+          model = "gpt-4.1"
+        },
+        openai = {
+          model = "gpt-4.1-nano"
+        }
+      },
+      behaviour = {
+        auto_suggestions = true;
+      },
+      web_search_engine = {
+        provider = "tavily"
+      }
     },
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
@@ -144,7 +158,8 @@ return {
             prompt_for_file_name = false,
             drag_and_drop = {
               insert_mode = true,
-            }
+            },
+            verbose = false
           },
         },
       },
