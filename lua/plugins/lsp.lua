@@ -98,7 +98,7 @@ local function text_format(symbol)
 end
 
 return {
-  {"nvim-treesitter", enabled = false},
+  {"nvim-treesitter", enabled = true},
   {"nvim-treesitter-textobjects", enabled = false},
   -- https://github.com/geldata/edgedb-vim/pull/12
   {"florisbosch/edgedb-vim", version = false},
