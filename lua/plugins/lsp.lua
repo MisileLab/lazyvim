@@ -127,7 +127,7 @@ return {
           model = "gpt-4.1"
         },
         openai = {
-          model = "gpt-4.1-nano"
+          model = "gpt-4.1-mini"
         }
       },
       behaviour = {
