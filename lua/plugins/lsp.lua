@@ -127,11 +127,11 @@ return {
           model = "gpt-4.1"
         },
         openai = {
-          model = "gpt-4.1-mini"
+          model = "o4-mini"
         }
       },
       behaviour = {
-        auto_suggestions = true;
+        auto_suggestions = false;
       },
       web_search_engine = {
         provider = "tavily"
