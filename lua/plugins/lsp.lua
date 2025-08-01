@@ -120,7 +120,7 @@ return {
     ---@module 'avante'
     ---@type avante.Config
     opts = {
-      provider = "openai",
+      provider = "copilot",
       -- auto_suggestions_provider = "openai",
       providers = {
         copilot = {
@@ -128,6 +128,13 @@ return {
         },
         openai = {
           model = "o4-mini"
+        },
+        ["openrouter"] = {
+          __inherited_from = "openai",
+          model = "openrouter/horizon-alpha",
+          api_key_name = "AVANTE_OPENROUTER_API_KEY",
+          endpoint = "https://openrouter.ai/api/v1",
+          timeout = 30000
         }
       },
       behaviour = {
