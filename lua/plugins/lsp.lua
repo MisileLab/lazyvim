@@ -126,14 +126,18 @@ return {
         copilot = {
           model = "gpt-4.1"
         },
-        openai = {
-          model = "o4-mini"
+        ["ollamaplus"] = {
+          __inherited_from = "openai",
+          endpoint = "https://ollama.misile.xyz",
+          model = "gpt-oss:20b",
+          api_key_name = "AVANTE_OLLAMA_API_KEY",
+          timeout = 30000
         },
         ["openrouter"] = {
           __inherited_from = "openai",
-          model = "openrouter/horizon-alpha",
-          api_key_name = "AVANTE_OPENROUTER_API_KEY",
           endpoint = "https://openrouter.ai/api/v1",
+          model = "openrouter/horizon-beta",
+          api_key_name = "AVANTE_OPENROUTER_API_KEY",
           timeout = 30000
         }
       },
