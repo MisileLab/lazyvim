@@ -132,14 +132,22 @@ return {
           endpoint = "https://ollama.misile.xyz/v1",
           model = "gpt-oss:20b",
           api_key_name = "AVANTE_OLLAMA_API_KEY",
-          timeout = 300000
+          timeout = 300000,
+          extra_request_body = {
+            think = "high";
+          }
         },
         ["openrouter"] = {
           __inherited_from = "openai",
           endpoint = "https://openrouter.ai/api/v1",
-          model = "z-ai/glm-4.5",
+          model = "openai/gpt-oss-120b",
           api_key_name = "AVANTE_OPENROUTER_API_KEY",
-          timeout = 30000
+          timeout = 30000,
+          extra_request_body = {
+            reasoning = {
+              effort = "high"
+            }
+          }
         }
       },
       behaviour = {
