@@ -125,7 +125,7 @@ return {
       -- auto_suggestions_provider = "openai",
       providers = {
         copilot = {
-          model = "gpt-4.1"
+          model = "o3-mini"
         },
         ["ollamaplus"] = {
           __inherited_from = "openai",
