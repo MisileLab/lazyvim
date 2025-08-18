@@ -4,7 +4,7 @@ local langs = {
   "nushell", "bashls", "tailwindcss", "astro", "ruff", "lua_ls", "marksman", "zls",
   "clangd", "hls", "jsonls", "gopls", "kotlin_language_server",
   "ruby_lsp", "rust_analyzer", "metals", "taplo", "yamlls", "svelte", "ts_ls",
-  "roslyn_ls"
+  "omnisharp"
 }
 
 for _, x in pairs(langs) do
