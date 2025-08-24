@@ -4,7 +4,7 @@ local langs = {
   "nushell", "bashls", "tailwindcss", "astro", "ruff", "lua_ls", "marksman", "zls",
   "clangd", "hls", "jsonls", "gopls", "kotlin_language_server",
   "ruby_lsp", "rust_analyzer", "metals", "taplo", "yamlls", "svelte", "ts_ls",
-  "omnisharp"
+  "omnisharp", "dartls"
 }
 
 for _, x in pairs(langs) do
@@ -99,7 +99,16 @@ local function text_format(symbol)
 end
 
 return {
-  {"nvim-treesitter", enabled = true},
+  {"nvim-treesitter", enabled = true, version = false},
+  {'nvim-flutter/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+    config = true,
+    version = false
+  },
   {"nvim-treesitter-textobjects", enabled = false},
   -- https://github.com/geldata/edgedb-vim/pull/12
   {"florisbosch/edgedb-vim", version = false},
