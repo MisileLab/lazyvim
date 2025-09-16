@@ -131,7 +131,7 @@ return {
     ---@type avante.Config
     opts = {
       provider = "copilot",
-      -- auto_suggestions_provider = "openai",
+      auto_suggestions_provider = "openrouter",
       providers = {
         copilot = {
           model = "o3-mini"
@@ -149,14 +149,14 @@ return {
         ["openrouter"] = {
           __inherited_from = "openai",
           endpoint = "https://openrouter.ai/api/v1",
-          model = "qwen/qwen3-coder:free",
+          model = "deepseek/deepseek-chat-v3.1:free",
           api_key_name = "AVANTE_OPENROUTER_API_KEY",
           timeout = 30000,
-          extra_request_body = {
-            reasoning = {
-              effort = "high"
-            }
-          }
+          -- extra_request_body = {
+          --   reasoning = {
+          --     effort = "high"
+          --   }
+          -- }
         }
       },
       behaviour = {
