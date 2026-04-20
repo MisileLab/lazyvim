@@ -3,16 +3,7 @@ vim.opt.termguicolors = true
 
 return {
   {
-    -- https://github.com/LazyVim/LazyVim/pull/6354
-    {
-    "akinsho/bufferline.nvim",
-      init = function()
-        local bufline = require("catppuccin.groups.integrations.bufferline")
-        function bufline.get()
-          return bufline.get_theme()
-        end
-      end,
-    },
+    { "akinsho/bufferline.nvim", version = false },
     {
       "LazyVim/LazyVim",
       version = false,
@@ -21,7 +12,6 @@ return {
       }
     },
     { "folke/lazy.nvim",       version = false },
-    { "wakatime/vim-wakatime", lazy = false, version = false },
     {
       "2kabhishek/nerdy.nvim",
       dependencies = {
